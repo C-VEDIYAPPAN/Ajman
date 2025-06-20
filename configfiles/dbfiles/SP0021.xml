@@ -1,0 +1,21 @@
+<storedProcedures>
+    <host id="SP0021">
+        <procedure>
+            <name>sp_ivr_transaction_call_details</name>
+            <inputParameters>
+			<parameter> <name>sessionId</name> <type>string</type></parameter>
+			<parameter> <name>mobilenumber</name> <type>string</type></parameter>
+			<parameter> <name>dnisname</name> <type>string</type></parameter>
+			<parameter> <name>Language</name> <type>string</type></parameter>
+			<parameter> <name>cid</name> <type>string</type></parameter>
+			<parameter> <name>sector</name> <type>string</type></parameter>
+			<parameter> <name>segment</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>status</name> <type>string</type></parameter>
+            <parameter> <name>status_code</name> <type>string</type></parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+   
+</storedProcedures>

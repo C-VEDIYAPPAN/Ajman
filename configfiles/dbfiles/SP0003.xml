@@ -1,0 +1,28 @@
+<storedProcedures>
+    <host id="SP0003">
+        <procedure>
+            <name>sp_get_Allflagdetails</name>
+            <inputParameters>
+			<parameter> <name>dnisname</name> <type>string</type></parameter>
+			<parameter> <name>preflang</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>status_out</name> <type>string</type></parameter>
+			<parameter> <name>error_msg</name> <type>string</type></parameter>
+			<parameter> <name>outage1_waveid</name> <type>string</type></parameter>
+			<parameter> <name>outage2_waveid</name> <type>string</type></parameter>
+			<parameter> <name>promotional_msg1_waveid</name> <type>string</type></parameter>
+			<parameter> <name>promotional_msg2_waveid</name> <type>string</type></parameter>
+			<parameter> <name>outage1_flag_status</name> <type>string</type></parameter>
+			<parameter> <name>outage2_flag_status</name> <type>string</type></parameter>
+			<parameter> <name>promotional_msg1_flag_status</name> <type>string</type></parameter>
+			<parameter> <name>promotional_msg2_flag_status</name> <type>string</type></parameter>
+			<parameter> <name>enableServices</name> <type>string</type></parameter>
+			<parameter> <name>OTPFeature</name> <type>string</type></parameter>
+			<parameter> <name>enableFavMenuServices</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

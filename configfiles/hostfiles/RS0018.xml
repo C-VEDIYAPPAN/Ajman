@@ -1,0 +1,41 @@
+<Host Id="RS0018">
+	<Description>Credit Card Block</Description>
+<RequestBody>
+<EE_EAI_MESSAGE>
+   <EE_EAI_HEADER>
+    <MsgFormat>S_REQ_MSGHEADER_CC_BLOCK</MsgFormat>
+    <MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+    <RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+    <RequestorUserId>S_REQ_USERID</RequestorUserId>
+    <RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+    <RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+    <MessageId>S_REQ_MSGID</MessageId>
+    <TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+    <ReturnCode>S_REQ_RETURNCODE</ReturnCode>
+    <ReturnDesc></ReturnDesc>
+     <Extra1></Extra1>
+    <Extra2></Extra2>
+  </EE_EAI_HEADER>
+  <ReqDetails>
+			<CARD_NO>S_REQ_CARD_NUMBER</CARD_NO>
+			<CARD_TYPE>S_REQ_CARD_TYPE</CARD_TYPE> 
+			<BLOCK_CODE>S_REQ_BLOCK_CODE</BLOCK_CODE>
+			<ADD_DETAILS-1>S_REQ_DETAILS1</ADD_DETAILS-1>
+			<ADD_DETAILS-2>S_REQ_DETAILS2</ADD_DETAILS-2>
+			<ADD_DETAILS-3>S_REQ_DETAILS3</ADD_DETAILS-3>
+			<ADD_DETAILS-4>S_REQ_DETAILS4</ADD_DETAILS-4>
+			<ADD_DETAILS-5>S_REQ_DETAILS5</ADD_DETAILS-5>
+			
+  </ReqDetails>
+</EE_EAI_MESSAGE> 
+</RequestBody>
+
+<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+		</response-data>
+</response>
+	
+</Host>

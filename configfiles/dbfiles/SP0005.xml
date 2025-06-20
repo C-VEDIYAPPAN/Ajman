@@ -1,0 +1,29 @@
+<storedProcedures>
+    <host id="SP0005">
+        <procedure>
+            <name>sp_get_cid_details</name>
+            <inputParameters>
+			<parameter> <name>cid</name> <type>string</type></parameter>
+			<parameter> <name>sector</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+			<parameter> <name>cidblocked_flag</name> <type>string</type></parameter>
+			<parameter> <name>tpinavailable_flag</name> <type>string</type></parameter>
+			<parameter> <name>tpinblocked_flag</name> <type>string</type></parameter>
+            <parameter> <name>tpirestricted_flag</name> <type>string</type></parameter>
+            <parameter> <name>status</name> <type>string</type></parameter>
+            <parameter> <name>ivraccessallowed</name> <type>string</type></parameter>
+            <parameter> <name>allowedsegments</name> <type>string</type></parameter>
+            <parameter> <name>segmentdescription</name> <type>string</type></parameter>
+            <parameter> <name>priorityBankingdnis</name> <type>string</type></parameter>
+            <parameter> <name>priorityBankingsegment</name> <type>string</type></parameter>
+            <parameter> <name>wealthBankingdnis</name> <type>string</type></parameter>
+            <parameter> <name>wealthBankingsegment</name> <type>string</type></parameter>
+            <parameter> <name>staffbankingdnis</name> <type>string</type></parameter>
+            <parameter> <name>staffbankingsegment</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

@@ -1,0 +1,16 @@
+<storedProcedures>
+    <host id="SP0007">
+        <procedure>
+            <name>sp_get_tpin</name>
+            <inputParameters>
+			<parameter> <name>cid</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>status</name> <type>string</type></parameter>
+            <parameter> <name>tpin</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

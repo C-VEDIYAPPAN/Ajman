@@ -1,0 +1,44 @@
+<Host Id="RS0009">
+	<Description>Recent account transaction</Description>
+	<RequestBody>
+		<EE_EAI_MESSAGE>
+			<EE_EAI_HEADER>
+				<MsgFormat>S_REQ_MSGHEADER_ACCOUNT_TRANSACTION_HIST</MsgFormat>
+				<MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+				<RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+				<RequestorUserId>S_REQ_USER_ID</RequestorUserId>
+				<RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+				<RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+				<MessageId>S_REQ_MSGID</MessageId>
+				<TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+				<ReturnCode>S_REQ_RETURNCODE</ReturnCode>
+				<ReturnDesc></ReturnDesc>
+				<Extra1></Extra1>
+				<Extra2></Extra2>
+			</EE_EAI_HEADER>
+			<ReqDetails>
+				<Account_Number>S_ACCOUNT_NUMBER</Account_Number>
+				<NoOfTxns>S_TOTAL_TRANSACTION</NoOfTxns>
+			</ReqDetails>
+		</EE_EAI_MESSAGE>
+
+
+	</RequestBody>
+
+	<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+				<str name='AC_CCY' varname='EE_EAI_MESSAGE/Response/AC_CCY' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />	
+			<listvar
+				listname='TRANSACTION_LIST'
+				listvalue='EE_EAI_MESSAGE/Response/TransactionDetails'
+				isList='Y'>
+				<element lvarname='TXN_DATE' lvarvalue='TXN_DATE' />
+				<element lvarname='TXN_AMOUNT' lvarvalue='TXN_AMOUNT' />
+				<element lvarname='CR_DR' lvarvalue='CR_DR' />
+			</listvar>
+		</response-data>
+	</response>
+</Host>

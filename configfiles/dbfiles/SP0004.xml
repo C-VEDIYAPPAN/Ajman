@@ -1,0 +1,16 @@
+<storedProcedures>
+    <host id="SP0004">
+        <procedure>
+            <name>sp_update_preferredlang</name>
+            <inputParameters>
+			<parameter> <name>ani</name> <type>string</type></parameter>
+			<parameter> <name>preflang</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>status</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

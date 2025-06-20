@@ -1,0 +1,47 @@
+<storedProcedures>
+    <host id="SP0018">
+        <procedure>
+            <name>sp_insert_ivr_transaction_details</name>
+            <inputParameters>
+			<parameter> <name>conversation_id</name> <type>string</type></parameter>
+			<parameter> <name>transaction_id</name><type>string</type></parameter>
+			<parameter> <name>transaction_type</name> <type>string</type></parameter>
+			<parameter> <name>service_name</name> <type>string</type></parameter>
+			<parameter> <name>customer_id</name> <type>string</type></parameter>
+			<parameter> <name>customer_sector</name> <type>string</type></parameter>
+			<parameter> <name>customer_segment</name> <type>string</type></parameter>
+			<parameter> <name>calling_number</name> <type>string</type></parameter>
+			<parameter> <name>dnis</name> <type>string</type></parameter>
+			<parameter> <name>language_</name> <type>string</type></parameter>
+			<parameter> <name>from_account</name> <type>string</type></parameter>
+			<parameter> <name>source_currency</name> <type>string</type></parameter>
+			<parameter> <name>to_account</name> <type>string</type></parameter>
+			<parameter> <name>to_consumer_number</name> <type>string</type></parameter>
+			<parameter> <name>to_credit_card_number</name> <type>string</type></parameter>
+			<parameter> <name>destination_currency</name><type>string</type></parameter>
+			<parameter> <name>amount</name> <type>string</type></parameter>
+			<parameter> <name>status_in</name> <type>string</type></parameter>
+			<parameter> <name>error_code</name> <type>string</type></parameter>
+			<parameter> <name>error_description</name> <type>string</type></parameter>
+			<parameter> <name>channel</name> <type>string</type></parameter>
+			<parameter> <name>media</name> <type>string</type></parameter>
+			<parameter> <name>media_value</name> <type>string</type></parameter>
+			<parameter> <name>soap_request</name> <type>string</type></parameter>
+			<parameter> <name>soap_response</name> <type>string</type></parameter>
+			<parameter> <name>server_host_name</name> <type>string</type></parameter>
+			<parameter> <name>reserve_1</name> <type>string</type></parameter>
+			<parameter> <name>reserve_2</name> <type>string</type></parameter>
+			<parameter> <name>reserve_3</name> <type>string</type></parameter>
+			<parameter> <name>reserve_4</name> <type>string</type></parameter>
+			<parameter> <name>reserve_5</name> <type>string</type></parameter>
+			
+			
+            </inputParameters>
+            <outputParameter>
+			<parameter> <name>status</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

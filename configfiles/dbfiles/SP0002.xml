@@ -1,0 +1,36 @@
+<storedProcedures>
+    <host id="SP0002">
+        <procedure>
+            <name>sp_get_callerinfo</name>
+            <inputParameters>
+			<parameter> <name>flagtype_in</name> <type>string</type></parameter>
+			<parameter> <name>dnisname</name> <type>string</type></parameter>
+			<parameter> <name>mobilenumber</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>wavfilearabic_emergency</name> <type>string</type></parameter>
+			<parameter> <name>wavfileenglish_emergency</name> <type>string</type></parameter>
+			<parameter> <name>wavfilehindi_emergency</name> <type>string</type></parameter>
+			<parameter> <name>flag_status_emergency</name> <type>string</type></parameter>
+			<parameter> <name>eng_welcome_welmsg</name> <type>string</type></parameter>
+			<parameter> <name>arb_welcome_welmsg</name> <type>string</type></parameter>
+			<parameter> <name>hin_welcome_welmsg</name> <type>string</type></parameter>
+			<parameter> <name>status_welmsg</name> <type>string</type></parameter>
+			<parameter> <name>preferredlang</name> <type>string</type></parameter>
+			<parameter> <name>blacklist_flag</name> <type>string</type></parameter>
+			<parameter> <name>aniblockedflag</name> <type>string</type></parameter>
+			<parameter> <name>eng_lang_welmsg</name> <type>string</type></parameter>
+			<parameter> <name>arb_lang_welmsg</name> <type>string</type></parameter>
+			<parameter> <name>hin_lang_welmsg</name> <type>string</type></parameter>
+			<parameter> <name>priority_welcome_welmsg</name> <type>string</type></parameter>
+			<parameter> <name>priority_lang_welmsg</name> <type>string</type></parameter>
+			<parameter> <name>transitionflag</name> <type>string</type></parameter>
+			<parameter> <name>transitionwavfile_hin</name> <type>string</type></parameter>
+			<parameter> <name>transitionwavfile_eng</name> <type>string</type></parameter>
+			<parameter> <name>transitionwavfile_arb</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

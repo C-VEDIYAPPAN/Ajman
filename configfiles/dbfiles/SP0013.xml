@@ -1,0 +1,32 @@
+<storedProcedures>
+    <host id="SP0013">
+        <procedure>
+            <name>sp_get_customer_session_info</name>
+            <inputParameters>
+				<parameter>
+					<name>mobilenumber</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>getservice</name>
+					<type>string</type>
+				</parameter>
+            </inputParameters>
+            <outputParameter>
+				<parameter>
+					<name>status</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>statuscode</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>service</name>
+					<type>string</type>
+				</parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    
+</storedProcedures>

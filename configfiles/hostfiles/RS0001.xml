@@ -1,0 +1,52 @@
+<Host Id="RS0001">
+	<Description>Customer search By ANI</Description>
+<RequestBody>
+<EE_EAI_MESSAGE>
+
+   <EE_EAI_HEADER>
+    <MsgFormat>S_REQ_MSGHEADER_CUST_SEARCH_ANI</MsgFormat>
+    <MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+    <RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+    <RequestorUserId>mobilenumber</RequestorUserId>
+    <RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+    <RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+    <MessageId>S_REQ_MSGID</MessageId>
+    <TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+    <Extra1></Extra1>
+    <Extra2></Extra2>
+  </EE_EAI_HEADER>
+  <ReqDetails>
+    <CUSTOMER_NUMBER></CUSTOMER_NUMBER>
+    <BIRTH_INCORP_DATE></BIRTH_INCORP_DATE>
+    <LEGAL_ID_NO></LEGAL_ID_NO>
+    <MOBILE>mobilenumber</MOBILE>
+    <NAME></NAME>
+    <SECTOR></SECTOR>
+    <ADD_DETAILS_1></ADD_DETAILS_1>
+    <ADD_DETAILS_2></ADD_DETAILS_2>
+  </ReqDetails>
+</EE_EAI_MESSAGE> 
+</RequestBody>
+
+<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE'
+				varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+				varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+			<listvar listname='CUSTOMER_LIST' listvalue='EE_EAI_MESSAGE/Response/CUSTOMER_LIST' isList='Y'>
+				<element lvarname='CUSTOMER_NUMBER' lvarvalue='CUSTOMER_NUMBER' />
+				<element lvarname='SECTOR' lvarvalue='SECTOR' />
+				<element lvarname='BIRTH_INCORP_DATE' lvarvalue='BIRTH_INCORP_DATE' />
+				<element lvarname='NATIONALITY' lvarvalue='NATIONALITY' />
+				<!--<sublist listname='LEGAL_ID' sublistlistvalue='LEGAL_ID/LEGAL_ID_DETAILS' isList='Y'>
+					<subelement lvarname='LEGAL_ID_TYPE' lvarvalue='LEGAL_ID_TYPE' />
+					<subelement lvarname='LEGAL_ID_NO' lvarvalue='LEGAL_ID_NO' />
+					<subelement lvarname='ISSUE_DATE' lvarvalue='ISSUE_DATE' />
+					<subelement lvarname='EXPIRY_DATE' lvarvalue='EXPIRY_DATE' />
+				</sublist>-->
+			</listvar>
+		</response-data>
+	</response>
+	
+</Host>

@@ -1,0 +1,17 @@
+<storedProcedures>
+    <host id="SP0014">
+        <procedure>
+            <name>sp_update_tpin_flag</name>
+            <inputParameters>
+			<parameter> <name>customer_id</name> <type>string</type></parameter>
+			<parameter> <name>new_tpin_flag</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+			<parameter> <name>result_message</name> <type>string</type></parameter>
+			<parameter> <name>error_message</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

@@ -1,0 +1,41 @@
+<Host Id="RS0015">
+	<Description>ACCOUNT TRANSFER</Description>
+<RequestBody>
+<EE_EAI_MESSAGE>
+
+   <EE_EAI_HEADER>
+    <MsgFormat>S_REQ_MSGHEADER_ACC_TRFR</MsgFormat>
+    <MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+    <RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+    <RequestorUserId></RequestorUserId>
+    <RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+    <RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+    <ReturnCode>S_REQ_RETURNCODE</ReturnCode>
+	<ReturnDesc></ReturnDesc>
+    <MessageId>S_REQ_MSGID</MessageId>
+    <TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+    <Extra1></Extra1>
+    <Extra2></Extra2>
+  </EE_EAI_HEADER>
+  <ReqDetails>
+    <TRANSACTION_TYPE>S_TRANSACTION_TYPE</TRANSACTION_TYPE>
+    <DEBIT_ACCT_NO>S_DEBIT_ACCT_NO</DEBIT_ACCT_NO>
+    <CREDIT_CURRENCY>S_CREDIT_CURRENCY</CREDIT_CURRENCY>
+    <CREDIT_AMOUNT>S_CREDIT_AMOUNT</CREDIT_AMOUNT>
+    <CREDIT_ACCT_NO>S_CREDIT_ACCT_NO</CREDIT_ACCT_NO>
+    <DEBIT_THEIR_REF>S_DEBIT_THEIR_REF</DEBIT_THEIR_REF>
+    <CREDIT_THEIR_REF>S_CREDIT_THEIR_REF</CREDIT_THEIR_REF>
+  </ReqDetails>
+</EE_EAI_MESSAGE> 
+</RequestBody>
+
+<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+			<str name = 'TransactionId' varname='EE_EAI_MESSAGE/Response/TransactionId'/>	
+		</response-data>
+	</response>
+	
+</Host>

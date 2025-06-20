@@ -1,0 +1,61 @@
+<Host Id="RS0003">
+	<Description>Customer search BY CARD</Description>
+	<RequestBody>
+		<EE_EAI_MESSAGE>
+			<EE_EAI_HEADER>
+				<MsgFormat>S_REQ_MSGHEADER_CUST_PROFILE_CARD_</MsgFormat>
+				<MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+				<RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+				<RequestorUserId>S_REQ_USER_ID</RequestorUserId>
+				<RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+				<RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+				<MessageId>S_REQ_MSGID</MessageId>
+				<TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+				<ReturnCode>S_REQ_RETURNCODE</ReturnCode>
+				<ReturnDesc>
+				</ReturnDesc>
+				<Extra1></Extra1>
+				<Extra2></Extra2>
+			</EE_EAI_HEADER>
+			<ReqDetails>
+				<CUSTOMER_NUMBER></CUSTOMER_NUMBER>
+				<CARD_NUMBER>S_CARD_NUMBER</CARD_NUMBER>
+				<CARD_TYPE>S_CARD_TYPE</CARD_TYPE>
+			</ReqDetails>
+		</EE_EAI_MESSAGE>
+
+	</RequestBody>
+	<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE'
+				varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+			<str name='CUSTOMER_NUMBER'
+				varname='EE_EAI_MESSAGE/Response/CUSTOMER_NUMBER' />
+			<str name='SECTOR' varname='EE_EAI_MESSAGE/Response/SECTOR' />
+			<str name='SHORT_NAME' varname='EE_EAI_MESSAGE/Response/SHORT_NAME' />
+			<str name='CUSTOMER_STATUS'
+				varname='EE_EAI_MESSAGE/Response/CUSTOMER_STATUS' />
+				<str name='ISSUE_CHEQUES'
+				varname='EE_EAI_MESSAGE/Response/ISSUE_CHEQUES' />
+			<str name='NATIONALITY'
+				varname='EE_EAI_MESSAGE/Response/NATIONALITY' />
+			<str name='SMS1' varname='EE_EAI_MESSAGE/Response/SMS_1' />
+			<str name='BIRTH_INCORP_DATE' varname='EE_EAI_MESSAGE/Response/BIRTH_INCORP_DATE' />
+				
+			 <listvar listname='LEGAL_ID' listvalue='EE_EAI_MESSAGE/Response/LEGAL_ID/LEGAL_ID_DETAILS' isList='Y'>
+					<element lvarname='LEGAL_ID_TYPE' lvarvalue='LEGAL_ID_TYPE' />
+					<element lvarname='LEGAL_ID_NO' lvarvalue='LEGAL_ID_NO' />
+					<element lvarname='ISSUE_DATE' lvarvalue='ISSUE_DATE' />
+					<element lvarname='EXPIRY_DATE' lvarvalue='EXPIRY_DATE' />
+			</listvar>		
+
+			<!--<listvar listname='S_LIST_CUSTOMER_DETAILS' listvalue='EE_EAI_MESSAGE/Response/EAI_CARD_DETAILS/CARDS_LIST' isList='Y'>
+            <element lvarname='S_CS_CUSTOMER_NUMBER'  lvarvalue='ACCOUNT_NUMBER'/>
+            <element lvarname='S_CS_ACCOUNT_NUMBER' lvarvalue='CREDIT_CARD_NUMBER'/>
+             <element lvarname='S_CS_CARDLIMIT' lvarvalue='CARD_LIMIT'/>
+        </listvar>-->
+		</response-data>
+	</response>
+</Host>

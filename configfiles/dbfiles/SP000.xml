@@ -1,0 +1,18 @@
+<storedProcedures>
+    <host id="SP000">
+        <procedure>
+            <name>get_customer_details</name>
+            <inputParameters>
+			<parameter> <name>mobile_number</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+			<parameter> <name>blockcodflag</name> <type>string</type></parameter>
+			<parameter> <name>blocktpinflag</name> <type>string</type></parameter>
+			<parameter> <name>errorcode</name> <type>string</type></parameter>
+            <parameter> <name>errormsg</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

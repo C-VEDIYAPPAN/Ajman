@@ -1,0 +1,14 @@
+<storedProcedures>
+    <host id="SP0017">
+        <procedure>
+            <name>sp_branch_code</name>
+            <inputParameters>
+            </inputParameters>
+            <outputParameter>
+			<parameter> <name>branch_code_get</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

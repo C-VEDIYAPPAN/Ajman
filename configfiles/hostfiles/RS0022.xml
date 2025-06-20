@@ -1,0 +1,36 @@
+<Host Id="RS0022">
+	<Description>CC Block</Description>
+<RequestBody>
+<EE_EAI_MESSAGE>
+
+   <EE_EAI_HEADER>
+    <MsgFormat>S_REQ_MSGHEADER_CC_BLOCK</MsgFormat>
+    <MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+    <RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+    <RequestorUserId>S_REQ_USER_ID</RequestorUserId>
+    <RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+    <RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+    <MessageId>S_REQ_MSGID</MessageId>
+    <TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+    <Extra1></Extra1>
+    <Extra2></Extra2>
+  </EE_EAI_HEADER>
+  <ReqDetails>
+    <CARD_NO>S_CARD_NO</CARD_NO> 
+	<CARD_TYPE>S_CARD_TYPE</CARD_TYPE> 
+  </ReqDetails>
+</EE_EAI_MESSAGE> 
+</RequestBody>
+
+<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />			
+			<listvar listname='CC_BLOCK'	listvalue='EE_EAI_MESSAGE/Response/CC_BLOCK'>
+			<element lvarname='BLOCK_CODE' lvarvalue='BLOCK_CODE' />
+			<element lvarname='ReturnDesc' lvarvalue='ReturnDesc' />	
+			</listvar>
+		</response-data>
+	</response>
+	
+</Host>

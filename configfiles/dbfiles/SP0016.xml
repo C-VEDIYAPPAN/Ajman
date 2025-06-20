@@ -1,0 +1,15 @@
+<storedProcedures>
+    <host id="SP0016">
+        <procedure>
+            <name>sp_insertpromoconfirmation</name>
+            <inputParameters>
+			<parameter> <name>mobilenumber</name> <type>string</type></parameter>
+			<parameter> <name>interestflag</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+			<parameter> <name>status</name> <type>string</type></parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

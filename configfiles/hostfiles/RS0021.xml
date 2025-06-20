@@ -1,0 +1,43 @@
+<Host Id="RS0021">
+	<Description>CC Payment</Description>
+<RequestBody>
+<EE_EAI_MESSAGE>
+
+   <EE_EAI_HEADER>
+    <MsgFormat>S_REQ_MSGHEADER_CC_PAYMENT</MsgFormat>
+    <MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+    <RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+    <RequestorUserId>S_REQ_USER_ID</RequestorUserId>
+    <RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+    <RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+    <MessageId>S_REQ_MSGID</MessageId>
+    <TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+    <Extra1></Extra1>
+    <Extra2></Extra2>
+  </EE_EAI_HEADER>
+  <ReqDetails>
+    <ACCOUNT_NUMBER>S_ACCOUNT_NUMBER</ACCOUNT_NUMBER>
+	<PAYMENT_TYPE>S_PAYMENT_TYPE</PAYMENT_TYPE>
+	<PAYMENT_AMOUNT>S_AMOUNT</PAYMENT_AMOUNT>
+	<PAYMENT_CURRENCY>S_CURR</PAYMENT_CURRENCY>
+	<CARD_NUMBER>S_CARD_NUMBER</CARD_NUMBER>
+	<PAYMENT_DESC>S_PAYM_DESC</PAYMENT_DESC>
+	<ADD_DETAILS_1></ADD_DETAILS_1>
+
+  </ReqDetails>
+</EE_EAI_MESSAGE> 
+</RequestBody>
+
+<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+			<listvar listname='CC_PAYMENT'	listvalue='EE_EAI_MESSAGE/Response/CC_PAYMENT'>
+				<element lvarname='TransactionId' lvarvalue='TransactionId' />
+				<element lvarname='ReturnCode' lvarvalue='ReturnCode' />
+				<element lvarname='ReturnDesc' lvarvalue='ReturnDesc' />				
+			</listvar>
+		</response-data>
+	</response>
+	
+</Host>

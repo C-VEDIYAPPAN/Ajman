@@ -1,0 +1,58 @@
+<Host Id="RS0026">
+	<Description>Credit card list</Description>
+	<RequestBody>
+		<EE_EAI_MESSAGE>
+			<EE_EAI_HEADER>
+				<MsgFormat>S_REQ_MSGHEADER_CARDDETAILS_CC</MsgFormat>
+				<MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+				<RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+				<RequestorUserId>S_REQ_USER_ID</RequestorUserId>
+				<RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+				<RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+				<MessageId>S_REQ_MSGID</MessageId>
+				<TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+				<ReturnCode>S_REQ_RETURNCODE</ReturnCode>
+				<ReturnDesc></ReturnDesc>
+				<Extra1></Extra1>
+				<Extra2></Extra2>
+			</EE_EAI_HEADER>
+			<ReqDetails>
+				<CUSTOMER_NUMBER></CUSTOMER_NUMBER>
+				<CARD_NUMBER>S_CARD_NUMBER</CARD_NUMBER>
+				<CARD_INDICATOR>S_REQ_CARD_TYPE_CC</CARD_INDICATOR>
+			</ReqDetails>
+		</EE_EAI_MESSAGE>
+
+
+	</RequestBody>
+
+	<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE'
+				varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />	
+			<listvar
+				listname='CARDS_LIST'
+				listvalue='EE_EAI_MESSAGE/Response/EAI_CARD_DETAILS/CARDS_LIST'
+				isList='Y'>
+				<element lvarname='CARDNUMBER' lvarvalue='CREDIT_CARD_NUMBER' />
+				<element lvarname='CARD_STATUS' lvarvalue='CARD_STATUS' />
+				<element lvarname='AVAIL_BAL' lvarvalue='AVAIL_BAL'/>
+				<element lvarname='CARD_BLOCK_CODE' lvarvalue='CARD_BLOCK_CODE'/>
+				
+			</listvar>
+			<listvar
+				listname='ACCT_DETAILS'
+				listvalue='EE_EAI_MESSAGE/Response/EAI_ACCT_DETAILS/ACCT_DETAILS'
+				isList='Y'>
+				<element lvarname='CURR_BAL' lvarvalue='CURR_BAL' />
+				<element lvarname='LAST_PMT_DATE' lvarvalue='LAST_PMT_DATE' />
+				<element lvarname='LAST_PMT_AMT' lvarvalue='LAST_PMT_AMT' />
+				<element lvarname='MIN_DUE' lvarvalue='MIN_DUE' />
+				<element lvarname='DATE_PMT_DUE' lvarvalue='DATE_PMT_DUE' />
+			</listvar>
+			
+		</response-data>
+	</response>
+</Host>

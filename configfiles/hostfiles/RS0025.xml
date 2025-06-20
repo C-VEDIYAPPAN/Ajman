@@ -1,0 +1,37 @@
+<Host Id="RS0025">
+	<Description>Balance By Account Number</Description>
+	<RequestBody>
+		<EE_EAI_MESSAGE>
+			<EE_EAI_HEADER>
+				<MsgFormat>EAI_BALANCE_ENQUIRY</MsgFormat>
+				<MsgVersion>001</MsgVersion>
+				<RequestorChannelId>IVR</RequestorChannelId>
+				<RequestorUserId></RequestorUserId>
+				<RequestorLanguage>E</RequestorLanguage>
+				<RequestorSecurityInfo></RequestorSecurityInfo>
+				<MessageId>S_REQ_MSGID</MessageId>
+				<TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+				<ReturnCode>9999</ReturnCode>
+				<ReturnDesc></ReturnDesc>
+				<Extra1></Extra1>
+				<Extra2></Extra2>
+			</EE_EAI_HEADER>
+			<ReqDetails>
+				<Account_Number>S_ACCOUNT_NUMBER</Account_Number>
+			</ReqDetails>
+		</EE_EAI_MESSAGE>
+
+
+	</RequestBody>
+
+	<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE'
+				varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+				varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+				<str name='BALANCE'
+				varname='EE_EAI_MESSAGE/Response/AVAIL_BAL' />
+		</response-data>
+	</response>
+</Host>

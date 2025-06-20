@@ -1,0 +1,16 @@
+<storedProcedures>
+    <host id="SP0022">
+        <procedure>
+            <name>sp_update_Customer_Segment</name>
+            <inputParameters>
+			<parameter> <name>customer_id_in</name> <type>string</type></parameter>
+			<parameter> <name>segment_in</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>result_message</name> <type>string</type></parameter>
+            <parameter> <name>error_message</name> <type>string</type></parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

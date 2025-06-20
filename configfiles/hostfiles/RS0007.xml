@@ -1,0 +1,46 @@
+<Host Id="RS0007">
+	<Description>Deposit list</Description>
+	<RequestBody>
+		<EE_EAI_MESSAGE>
+			<EE_EAI_HEADER>
+				<MsgFormat>S_REQ_MSGHEADER_DEPOSITS_LIST</MsgFormat>
+				<MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+				<RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+				<RequestorUserId>S_REQ_USER_ID</RequestorUserId>
+				<RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+				<RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+				<MessageId>S_REQ_MSGID</MessageId>
+				<TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+				<ReturnCode>S_REQ_RETURNCODE</ReturnCode>
+				<ReturnDesc></ReturnDesc>
+				<Extra1></Extra1>
+				<Extra2></Extra2>
+			</EE_EAI_HEADER>
+			<ReqDetails>
+				<CUSTOMER_NUMBER>S_CID</CUSTOMER_NUMBER>
+			</ReqDetails>
+		</EE_EAI_MESSAGE>
+	</RequestBody>
+
+	<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE'
+				varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />	
+			<listvar
+				listname='DEPOSITS_LIST'
+				listvalue='EE_EAI_MESSAGE/Response/DEPOSITS_LIST'
+				isList='Y'>
+				<element lvarname='CONTRACT_ID' lvarvalue='CONTRACT_ID' />
+				<element lvarname='STATUS' lvarvalue='STATUS' />
+				<element lvarname='START_DATE' lvarvalue='START_DATE' />
+				<element lvarname='TENOR' lvarvalue='TENOR' />
+				<element lvarname='PRINCIPAL' lvarvalue='PRINCIPAL' />
+				<element lvarname='CURRENCY' lvarvalue='CURRENCY' />
+				<element lvarname='MATURITY_DATE' lvarvalue='MATURITY_DATE' />
+				
+			</listvar>
+		</response-data>
+	</response>
+</Host>

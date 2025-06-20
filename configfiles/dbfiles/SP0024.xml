@@ -1,0 +1,15 @@
+<storedProcedures>
+    <host id="SP0024">
+        <procedure>
+            <name>sp_get_deniedfavservices</name>
+            <inputParameters>
+			<parameter> <name>cid</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+			 <parameter> <name>servicename_out</name> <type>string</type></parameter>
+            <parameter> <name>status</name> <type>string</type></parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

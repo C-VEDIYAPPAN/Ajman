@@ -1,0 +1,17 @@
+<storedProcedures>
+    <host id="SP0006">
+        <procedure>
+            <name>sp_update_tpin_v1</name>
+            <inputParameters>
+			<parameter> <name>cid</name> <type>string</type></parameter>
+			<parameter> <name>tpin</name> <type>string</type></parameter>
+			<parameter> <name>changedByAgent_in</name> <type>string</type></parameter>
+			<parameter> <name>changedByCustomer_in</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>status</name> <type>string</type></parameter>
+            <parameter> <name>isNewTpinEntry</name> <type>string</type></parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+</storedProcedures>

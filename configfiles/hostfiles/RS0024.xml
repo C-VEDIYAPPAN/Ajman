@@ -1,0 +1,35 @@
+<Host Id="RS0024">
+	<Description>Get Exchange Rate Details</Description>
+<RequestBody>
+<EE_EAI_MESSAGE>
+
+   <EE_EAI_HEADER>
+    <MsgFormat>EAI_GET_EXCHANGE_RATES</MsgFormat>
+    <MsgVersion>001</MsgVersion>
+    <RequestorChannelId>IVR</RequestorChannelId>
+    <RequestorUserId>userId</RequestorUserId>
+    <RequestorLanguage>E</RequestorLanguage>
+    <RequestorSecurityInfo>secure</RequestorSecurityInfo>
+    <ReturnCode></ReturnCode>
+	<ReturnDesc></ReturnDesc>
+    <MessageId>S_REQ_MSGID</MessageId>
+    <TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+    <Extra1></Extra1>
+    <Extra2></Extra2>
+  </EE_EAI_HEADER>
+</EE_EAI_MESSAGE> 
+</RequestBody>
+
+<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+			<listvar listname='RATE_LIST' listvalue='EE_EAI_MESSAGE/Response/RATE_LIST' isList='Y'>
+				<element lvarname='CURRENCY' lvarvalue='RATE_LIST_CURRENCY/CURRENCY'/>
+				<element lvarname='BUY_RATE' lvarvalue='RATE_LIST_TRANSFER/BUY_RATE'/>	
+			</listvar>
+		</response-data>
+</response>
+	
+</Host>

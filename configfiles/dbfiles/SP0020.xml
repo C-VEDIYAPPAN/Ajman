@@ -1,0 +1,17 @@
+<storedProcedures>
+    <host id="SP0020">
+        <procedure>
+            <name>sp_get_sms_template</name>
+            <inputParameters>
+			<parameter> <name>serviceName</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>template</name> <type>string</type></parameter>
+            <parameter> <name>templateId</name> <type>string</type></parameter>
+            <parameter> <name>status</name> <type>string</type></parameter>
+            <parameter> <name>status_code</name> <type>string</type></parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

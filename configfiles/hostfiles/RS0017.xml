@@ -1,0 +1,44 @@
+<Host Id="RS0017">
+	<Description>Recent  Credit card  transactions</Description>
+	<RequestBody>
+		<EE_EAI_MESSAGE>
+			<EE_EAI_HEADER>
+				<MsgFormat>S_REQ_MSGHEADER_CC_CARD_TRANSACTION</MsgFormat>
+				<MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+				<RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+				<RequestorUserId>S_REQ_USER_ID</RequestorUserId>
+				<RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+				<RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+				<ReturnCode>S_REQ_RETURNCODE</ReturnCode>
+				<ReturnDesc></ReturnDesc>
+				<MessageId>S_REQ_MSGID</MessageId>
+				<TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+				<Extra1 />
+				<Extra2 />
+			</EE_EAI_HEADER>
+			<ReqDetails>
+				<CREDIT_CARD_NUMBER>S_CARD_NUMBER</CREDIT_CARD_NUMBER>
+				<NO_OF_TRXNS>S_TOTAL_TRANSACTION</NO_OF_TRXNS>
+			</ReqDetails>
+		</EE_EAI_MESSAGE>
+	</RequestBody>
+
+	
+	<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+			<listvar
+				listname='TRANS_LIST'
+				listvalue='EE_EAI_MESSAGE/Response/TRANS_LIST'
+				isList='Y'>
+				<element lvarname='TXN_DATE' lvarvalue='TXN_DATE' />
+				<element lvarname='TXN_AMT' lvarvalue='TXN_AMT' />
+				<element lvarname='TXN_TYPE' lvarvalue='TXN_TYPE' />
+				<element lvarname='TXN_CUR' lvarvalue='TXN_CUR'/>
+			</listvar>
+		</response-data>
+	</response>
+
+</Host>

@@ -1,0 +1,51 @@
+<Host Id="RS0004">
+	<Description>AccountList</Description>
+	<RequestBody>
+		<EE_EAI_MESSAGE>
+			<EE_EAI_HEADER>
+				<MsgFormat>S_REQ_MSGHEADER_ACCOUNTLIST</MsgFormat>
+				<MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+				<RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+				<RequestorUserId>S_REQ_USER_ID</RequestorUserId>
+				<RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+				<RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+				<MessageId>S_REQ_MSGID</MessageId>
+				<TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+				<ReturnCode>S_REQ_RETURNCODE</ReturnCode>
+				<ReturnDesc></ReturnDesc>
+				
+				<Extra1></Extra1>
+				<Extra2></Extra2>
+			</EE_EAI_HEADER>
+			<ReqDetails>
+				<CUSTOMER_NUMBER>S_CID</CUSTOMER_NUMBER>
+				<ACCOUNT_ID></ACCOUNT_ID>
+			</ReqDetails>
+		</EE_EAI_MESSAGE>
+
+
+	</RequestBody>
+
+	<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE'
+				varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />	
+			<listvar
+				listname='ACCOUNT_DETAILS'
+				listvalue='EE_EAI_MESSAGE/Response/ACCOUNT_DETAILS' isList='Y'>
+				<element lvarname='ACCOUNT_ID' lvarvalue='ACCOUNT_ID' />
+				<element lvarname='AVAIL_BALANCE' lvarvalue='AVAIL_BALANCE' />
+				<element lvarname='CATEGORY' lvarvalue='CATEGORY' />
+				<element lvarname='CURRENCY' lvarvalue='CURRENCY' />
+				<element lvarname='POSTING_RISTRICT' lvarvalue='POSTING_RISTRICT' />
+				<element lvarname='INACTIV_MARKER' lvarvalue='INACTIV_MARKER' />
+				<element lvarname='JOINT_HOLDER' lvarvalue='JOINT_HOLDER' />
+				<element lvarname='STATUS' lvarvalue='STATUS' />
+				<element lvarname='IBAN' lvarvalue='IBAN' />
+				<element lvarname='BRANCH_CODE' lvarvalue='BRACNH_CODE' />
+			</listvar>
+		</response-data>
+	</response>
+</Host>

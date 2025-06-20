@@ -1,0 +1,52 @@
+<Host Id="RS0012">
+	<Description>Get list of Cards</Description>
+<RequestBody>
+<EE_EAI_MESSAGE>
+   <EE_EAI_HEADER>
+				<MsgFormat>S_REQ_MSGHEADER_LIST_OF_CARDS</MsgFormat>
+				<MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+				<RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+				<RequestorUserId>mobilenumber</RequestorUserId>
+				<RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+				<RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+				<MessageId>S_REQ_MSGID</MessageId>
+				<TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+				<Extra1></Extra1>
+				<Extra2></Extra2>
+				<HostCode>S_REQ_HOST_CODE</HostCode>
+				<HostDesc>S_REQ_HOST_DESC</HostDesc>
+				<ReturnCode></ReturnCode>
+				<ReturnDesc></ReturnDesc>
+  </EE_EAI_HEADER>
+  <ReqDetails>
+    <customer_id>customerid</customer_id>
+    <card_type>cardType</card_type>
+  </ReqDetails>
+</EE_EAI_MESSAGE> 
+</RequestBody>
+
+<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE'
+				varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+			<str name='customer_id' varname='EE_EAI_MESSAGE/Response/customer_id'/> 
+		<listvar
+				listname='CUSTOMER_LIST' listvalue='EE_EAI_MESSAGE/Response/CUSTOMER_LIST' isList='Y'>
+				<element lvarname='CUSTOMER_NUMBER' lvarvalue='CUSTOMER_NUMBER' />
+				<element lvarname='SECTOR' lvarvalue='SECTOR' />
+				<element lvarname='BIRTH_INCORP_DATE' lvarvalue='BIRTH_INCORP_DATE' />
+				<element lvarname='NATIONALITY' lvarvalue='NATIONALITY' />
+			<listvar listname='LEGAL_ID' listvalue='LEGAL_ID' isList='Y'>
+				
+				<element lvarname='LEGAL_ID_TYPE' lvarvalue='LEGAL_ID_DETAILS/LEGAL_ID_TYPE' />
+				<element lvarname='LEGAL_ID_NO' lvarvalue='LEGAL_ID_DETAILS/LEGAL_ID_NO' />
+				<element lvarname='ISSUE_DATE' lvarvalue='LEGAL_ID_DETAILS/ISSUE_DATE' />
+				<element lvarname='EXPIRY_DATE' lvarvalue='LEGAL_ID_DETAILS/EXPIRY_DATE' />
+			</listvar>	
+		</listvar>
+			</response-data>
+	</response>
+	
+</Host>

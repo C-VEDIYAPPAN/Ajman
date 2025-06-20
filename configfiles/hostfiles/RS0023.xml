@@ -1,0 +1,51 @@
+<Host Id="RS0014">
+	<Description>Funds Transfer CRS Validation</Description>
+<RequestBody>
+<EE_EAI_MESSAGE>
+
+   <EE_EAI_HEADER>
+    <MsgFormat>S_REQ_MSGHEADER_FUND_TRFR</MsgFormat>
+    <MsgVersion>S_REQ_MSG_VERSION</MsgVersion>
+    <RequestorChannelId>S_REQ_CHANNELID</RequestorChannelId>
+    <RequestorUserId>MOBILENO</RequestorUserId>
+    <RequestorLanguage>S_REQ_LANG</RequestorLanguage>
+    <RequestorSecurityInfo>S_REQ_SECURITY</RequestorSecurityInfo>
+    <ReturnCode>S_REQ_RETURNCODE</ReturnCode>
+	<ReturnDesc></ReturnDesc>
+    <MessageId>S_REQ_MSGID</MessageId>
+    <TimeStamp>S_REQ_TIMESTAMP</TimeStamp>
+    <Extra1></Extra1>
+    <Extra2></Extra2>
+  </EE_EAI_HEADER>
+  <ReqDetails>
+    <TRANSACTION_TYPE>S_TRANSACTION_TYPE</TRANSACTION_TYPE>
+    <DEBIT_CURRENCY>S_DEBIT_CURRENCY</DEBIT_CURRENCY> 
+    <DEBIT_AMOUNT>S_DEBIT_AMOUNT</DEBIT_AMOUNT> 
+    <DEBIT_ACCT_NO>S_DEBIT_ACCT_NO</DEBIT_ACCT_NO>
+    <CREDIT_CURRENCY>S_CREDIT_CURRENCY</CREDIT_CURRENCY>
+    <CREDIT_AMOUNT>S_CREDIT_AMOUNT</CREDIT_AMOUNT>
+    <CREDIT_ACCT_NO>S_CREDIT_ACCT_NO</CREDIT_ACCT_NO>
+    <CUSTOMER_RATE>S_CUSTOMER_RATE</CUSTOMER_RATE>
+    <DEBIT_THEIR_REF>S_DEBIT_THEIR_REF</DEBIT_THEIR_REF>
+    <CREDIT_THEIR_REF>S_CREDIT_THEIR_REF</CREDIT_THEIR_REF>
+    <CHARGE_CODE>S_CHARGE_CODE</CHARGE_CODE>
+	<CUSTOMER_SPREAD>S_CUSTOMER_SPREAD</CUSTOMER_SPREAD>
+  </ReqDetails>
+</EE_EAI_MESSAGE> 
+</RequestBody>
+
+<response>
+		<response-data>
+			<str name='HOST_RETURN_CODE' varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnCode' />
+			<str name='HOST_RETURN_DESCRIPTION'
+			     varname='EE_EAI_MESSAGE/EE_EAI_HEADER/ReturnDesc' />
+			<str name = 'TRANSACTION_ID' varname='EE_EAI_MESSAGE/Response/TRANSACTION_ID'/>	
+			<str name = 'AMOUNT_CREDITED' varname='EE_EAI_MESSAGE/Response/AMOUNT_CREDITED'/>	
+			<str name = 'CUSTOMER_RATE' varname='EE_EAI_MESSAGE/Response/CUSTOMER_RATE'/>
+			<str name = 'CREDIT_CURRENCY' varname='EE_EAI_MESSAGE/Response/CREDIT_CURRENCY'/>
+			<str name = 'TREASURY_RATE' varname='EE_EAI_MESSAGE/Response/TREASURY_RATE'/>	
+		
+		</response-data>
+</response>
+	
+</Host>

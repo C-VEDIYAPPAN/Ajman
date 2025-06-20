@@ -1,0 +1,32 @@
+<storedProcedures>
+    <host id="SP0025">
+        <procedure>
+            <name>sp_insert_customer_session_info_debit</name>
+            <inputParameters>
+				<parameter>
+					<name>mobilenumber</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>dclst</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>sessionId</name>
+					<type>string</type>
+				</parameter>
+            </inputParameters>
+            <outputParameter>
+				<parameter>
+					<name>status</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>status_code</name>
+					<type>string</type>
+				</parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

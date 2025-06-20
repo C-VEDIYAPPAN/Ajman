@@ -1,0 +1,37 @@
+<storedProcedures>
+    <host id="SP0019">
+        <procedure>
+            <name>sp_update_paymenttransactiondetails</name>
+            <inputParameters>
+				<parameter>
+					<name>accound_id</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>transferamount</name>
+					<type>int</type>
+				</parameter>
+				<parameter>
+					<name>paymentservicename</name>
+					<type>string</type>
+				</parameter>
+				
+            </inputParameters>
+            <outputParameter>
+				<parameter>
+					<name>status</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>error_code</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>error_msg</name>
+					<type>string</type>
+				</parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>
