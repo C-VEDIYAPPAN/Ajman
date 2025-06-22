@@ -8,7 +8,7 @@ EXPOSE 8080
 WORKDIR /app
 
 # Copy the packaged JAR file into the container
-COPY target/ajmanbank-0.0.1-SNAPSHOT.jar app.jar
+COPY ajmanbank-0.0.1-SNAPSHOT.jar app.jar
 
 COPY configfiles /app/configfiles
 # Specify the command to run your application
