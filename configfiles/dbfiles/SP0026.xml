@@ -1,26 +1,22 @@
 <storedProcedures>
     <host id="SP0026">
         <procedure>
-            <name>sp_ses_manage_customer_language</name>
+            <name>sp_ses_updateandinsert_customer_language</name>
             <inputParameters>
 				<parameter>
 					<name>mobileNum</name>
 					<type>string</type>
 				</parameter>
-            </inputParameters>
-            <outputParameter>
-            	<parameter>
-					<name>mobilenum</name>
+				<parameter>
+					<name>custNum</name>
 					<type>string</type>
 				</parameter>
-            	<parameter>
-					<name>customerid</name>
-					<type>string</type>
-				</parameter>
-            	<parameter>
+				<parameter>
 					<name>custlang</name>
 					<type>string</type>
 				</parameter>
+            </inputParameters>
+            <outputParameter>
 				<parameter>
 					<name>status</name>
 					<type>string</type>
