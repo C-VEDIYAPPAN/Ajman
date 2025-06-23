@@ -12,7 +12,7 @@
 					<type>string</type>
 				</parameter>
 				<parameter>
-					<name>custlang</name>
+					<name>custLang</name>
 					<type>string</type>
 				</parameter>
             </inputParameters>
