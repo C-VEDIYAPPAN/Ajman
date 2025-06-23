@@ -1,0 +1,19 @@
+<storedProcedures>
+    <host id="SP0029">
+        <procedure>
+            <name>sp_ses_update_or_delete_favorite_menu</name>
+            <inputParameters>
+			<parameter> <name>in_customerId</name> <type>string</type></parameter>
+			<parameter> <name>in_serviceName</name> <type>string</type></parameter>
+			<parameter> <name>in_ani</name> <type>string</type></parameter>
+			<parameter> <name>in_type</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>status</name> <type>string</type></parameter>
+            <parameter> <name>status_code</name> <type>int</type></parameter>
+             <parameter> <name>msg</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+</storedProcedures>

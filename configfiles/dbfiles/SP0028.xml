@@ -1,0 +1,16 @@
+<storedProcedures>
+    <host id="SP0028">
+        <procedure>
+            <name>sp_ses_get_matching_favorite_options</name>
+            <inputParameters>
+			<parameter> <name>in_customerId</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>final_values</name> <type>string</type></parameter>
+            <parameter> <name>deniedServices</name> <type>string</type></parameter>
+            <parameter> <name>status_code</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+</storedProcedures>
