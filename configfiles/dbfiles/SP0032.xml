@@ -1,0 +1,32 @@
+<storedProcedures>
+    <host id="SP0032">
+        <procedure>
+            <name>sp_ses_check_binmanagementexist</name>
+            <inputParameters>
+				<parameter>
+					<name>bin</name>
+					<type>string</type>
+				</parameter>
+            </inputParameters>
+            <outputParameter>
+				<parameter>
+					<name>out_description</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>out_card_type</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>status</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>status_code</name>
+					<type>string</type>
+				</parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>
