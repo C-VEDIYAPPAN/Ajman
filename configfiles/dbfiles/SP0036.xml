@@ -1,7 +1,7 @@
 <storedProcedures>
     <host id="SP0036">
         <procedure>
-            <name>sp_check_status_in_inclusive_list</name>
+            <name>sp_ses_check_status_in_inclusive_list</name>
             <inputParameters>
 			<parameter> <name>status</name> <type>string</type></parameter>
 			<parameter> <name>inclusive_list</name> <type>string</type></parameter>
