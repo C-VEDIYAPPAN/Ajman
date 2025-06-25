@@ -1,0 +1,16 @@
+<storedProcedures>
+    <host id="SP0034">
+        <procedure>
+            <name>sp_ses_get_product_names</name>
+            <inputParameters>
+			<parameter> <name>productCode</name> <type>string</type></parameter>
+			
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>product_names</name> <type>string</type></parameter>
+             <parameter> <name>status</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+</storedProcedures>

@@ -1,0 +1,24 @@
+<storedProcedures>
+    <host id="SP0033">
+        <procedure>
+            <name>sp_ses_check_creditcardbockcodeexist</name>
+            <inputParameters>
+				<parameter>
+					<name>blockCode</name>
+					<type>string</type>
+				</parameter>
+            </inputParameters>
+            <outputParameter>
+				<parameter>
+					<name>status</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>status_code</name>
+					<type>string</type>
+				</parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>

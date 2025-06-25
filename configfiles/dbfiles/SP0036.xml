@@ -1,0 +1,16 @@
+<storedProcedures>
+    <host id="SP0036">
+        <procedure>
+            <name>sp_check_status_in_inclusive_list</name>
+            <inputParameters>
+			<parameter> <name>status</name> <type>string</type></parameter>
+			<parameter> <name>inclusive_list</name> <type>string</type></parameter>
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>status</name> <type>string</type></parameter>
+             <parameter> <name>status_code</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+</storedProcedures>

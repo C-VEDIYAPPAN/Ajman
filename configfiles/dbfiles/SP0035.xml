@@ -1,0 +1,16 @@
+<storedProcedures>
+    <host id="SP0035">
+        <procedure>
+            <name>sp_ses_get_otpvalidation_flag</name>
+            <inputParameters>
+			<parameter> <name>features</name> <type>string</type></parameter>
+			
+            </inputParameters>
+            <outputParameter>
+            <parameter> <name>otpvalidation_flag</name> <type>string</type></parameter>
+             <parameter> <name>status</name> <type>string</type></parameter>
+            </outputParameter>
+			
+        </procedure>
+    </host>
+</storedProcedures>

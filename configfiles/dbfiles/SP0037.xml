@@ -1,0 +1,32 @@
+<storedProcedures>
+    <host id="SP0037">
+        <procedure>
+            <name>sp_ses_insert_customer_transaction</name>
+            <inputParameters>
+				<parameter>
+					<name>customerId</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>transactionAmount</name>
+					<type>double</type>
+				</parameter>
+				<parameter>
+					<name>service</name>
+					<type>string</type>
+				</parameter>
+            </inputParameters>
+            <outputParameter>
+				<parameter>
+					<name>status</name>
+					<type>string</type>
+				</parameter>
+				<parameter>
+					<name>status_code</name>
+					<type>string</type>
+				</parameter>
+            </outputParameter>
+        </procedure>
+    </host>
+    <!-- Add more hosts and procedures as needed -->
+</storedProcedures>
